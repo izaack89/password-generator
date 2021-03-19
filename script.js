@@ -31,9 +31,11 @@ function generatePassword() {
 
   //With this code I'm sure that the user select a lenght between 8 and 128
   while (checkLength) {    
-    var length = prompt("Length between 8 and 128 ");
-    if (length >= 8 && length <= 128 ) {
+    var length = prompt("How many characters would you like your password to contain? ");
+    if (length >= 8 && length <= 128) {
       checkLength = false
+    } else {
+      alert("Password length musr be at least 8 character and lower of 128 characters")
     }
   }
   /*Added this loop that will help that the user must select at least one option criteria for the password*/
@@ -44,19 +46,19 @@ function generatePassword() {
     var hasSpecial = true;
     var hasNumber = true;
     // Display a confirm to check if the user want to have Lower Case words on the password
-    if (!confirm("Lower case!")) {
+    if (!confirm("Click OK to confirm including Lowercase characters.")) {
         hasLower = false;
     }
     // Display a confirm to check if the user want to have Upper Case words on the password
-    if (!confirm("Upper case!")) {
+    if (!confirm("Click OK to confirm including Uppercase characters.")) {
         hasUpper = false;
     }
     // Display a confirm to check if the user want to have Special Characters on the password
-    if (!confirm("Special Character!")) {
+    if (!confirm("Click OK to confirm including Special characters.")) {
         hasSpecial = false;
     }
     // Display a confirm to check if the user want to have Numbers on the password
-    if (!confirm("Numbers!")) {
+    if (!confirm("Click OK to confirm including Numeric characters.  º")) {
         hasNumber = false;
     }
     //I  Check if any criteria is selected , if yes it outs of this loop if not it keep asking the user to select at least one criteria
