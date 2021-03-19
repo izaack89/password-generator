@@ -44,25 +44,29 @@ function generatePassword() {
     var hasUpper = true;
     var hasSpecial = true;
     var hasNumber = true;
+    // Display a confirm to check if the user want to have Lower Case words on the password
     if (!confirm("Lower case!")) {
         hasLower = false;
     }
+    // Display a confirm to check if the user want to have Upper Case words on the password
     if (!confirm("Upper case!")) {
         hasUpper = false;
     }
+    // Display a confirm to check if the user want to have Special Characters on the password
     if (!confirm("Special Character!")) {
         hasSpecial = false;
     }
+    // Display a confirm to check if the user want to have Numbers on the password
     if (!confirm("Numbers!")) {
         hasNumber = false;
     }
+    //CHeck if any criteria is selected , if yes it outs of this loop if not it keep asking the user to select at least one criteria
     if (hasLower || hasUpper || hasSpecial || hasNumber) {
       checkConditions = false;
-      // I set this console to check if the logic is correct 
-      console.log("enter if",hasLower , hasUpper , hasSpecial , hasNumber)
     }
-    // I use this console to check the values
-    console.log("check values:",hasLower , hasUpper , hasSpecial , hasNumber)
+    else {
+      alert('Please select at least one password criteria!');
+    }
   }
 
   return password;
