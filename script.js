@@ -15,3 +15,14 @@ generateBtn.addEventListener("click", writePassword);
 
 
 // function generatePassword
+
+
+
+function generatePassword() {
+  var stringsLower = "abcdefghijklmnopqrstuvwxyz";
+  var stringsUpper = stringsLower.toUpperCase();
+  var numbers = '0123456789';
+  var specialCharacters = '!”#$%&’()*+,-./:;<=>?@[\\]^_`{|}~';
+
+}
+
