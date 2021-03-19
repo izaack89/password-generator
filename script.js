@@ -33,11 +33,36 @@ function generatePassword() {
   //With this code I'm sure that the user select a lenght between 8 and 128
   while (checkLength) {    
     var length = prompt("Length between 8 and 128 ");
-    //This console help to check the value of the length 
-    console.log(length)
     if (length >= 8 && length <= 128 ) {
       checkLength = false
     }
+  }
+  /*Added this loop that will help that the user must select at least one option criteria for the password*/
+  var checkConditions = true;
+  while(checkConditions){
+    var hasLower = true;
+    var hasUpper = true;
+    var hasSpecial = true;
+    var hasNumber = true;
+    if (!confirm("Lower case!")) {
+        hasLower = false;
+    }
+    if (!confirm("Upper case!")) {
+        hasUpper = false;
+    }
+    if (!confirm("Special Character!")) {
+        hasSpecial = false;
+    }
+    if (!confirm("Numbers!")) {
+        hasNumber = false;
+    }
+    if (hasLower || hasUpper || hasSpecial || hasNumber) {
+      checkConditions = false;
+      // I set this console to check if the logic is correct 
+      console.log("enter if",hasLower , hasUpper , hasSpecial , hasNumber)
+    }
+    // I use this console to check the values
+    console.log("check values:",hasLower , hasUpper , hasSpecial , hasNumber)
   }
 
   return password;
