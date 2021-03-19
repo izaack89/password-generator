@@ -35,7 +35,7 @@ function generatePassword() {
     if (length >= 8 && length <= 128) {
       checkLength = false
     } else {
-      alert("Password length musr be at least 8 character and lower of 128 characters")
+      alert("Password length must be at least 8 character and lower of 128 characters")
     }
   }
   /*Added this loop that will help that the user must select at least one option criteria for the password*/
