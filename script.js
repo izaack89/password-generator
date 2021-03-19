@@ -29,6 +29,17 @@ function generatePassword() {
   var checkLength = true;
   /* This variable will be the one that will contain the final password to present to the user */
   var password = "";
+
+  //With this code I'm sure that the user select a lenght between 8 and 128
+  while (checkLength) {    
+    var length = prompt("Length between 8 and 128 ");
+    //This console help to check the value of the length 
+    console.log(length)
+    if (length >= 8 && length <= 128 ) {
+      checkLength = false
+    }
+  }
+
   return password;
 }
 
