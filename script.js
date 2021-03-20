@@ -58,7 +58,7 @@ function generatePassword() {
         hasSpecial = false;
     }
     // Display a confirm to check if the user want to have Numbers on the password
-    if (!confirm("Click OK to confirm including Numeric characters.  º")) {
+    if (!confirm("Click OK to confirm including Numeric characters. ")) {
         hasNumber = false;
     }
     //I  Check if any criteria is selected , if yes it outs of this loop if not it keep asking the user to select at least one criteria
