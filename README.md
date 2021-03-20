@@ -17,12 +17,12 @@ The system in order to display a password it follow the next steps:
 
 ## Errors Handlers
 
-I added 3 features on the code in order to avoid any system breaks or issues
+I added 3 features that will prevent that the system crash and are the follow:
 
-1. When on the first prompt , the user need to set the length of the password so if it write less than 7 or greatest of 128 or is null, the system will display this error
+1. When on the first step , if you set a length than is lower of 8 or greatest of 128 or if is null, the system will display this error and will show again the message until a valid lenght is enter
    ![Error Handler 1](./readmeFiles/error_handler1.png)
 
-2. When is on the password criteria if none of the criteria is selected the system will display this error
+2. If none of the password criteria are selected the system will display this error and it will create a loop until one or more criterias are selected
    ![Error Handler 2](./readmeFiles/error_handler2.png)
 
 3. Before to display the password I do a substr function in order to get the length that was enter by the beggining
